@@ -1,0 +1,184 @@
+@import config
+
+// CUSTOM USER STYLES & IMPORTS
+html
+  font-size: 10px
+  overflow: hidden
+
+header
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  padding: 2rem 0
+  margin-bottom: 4rem
+  z-index: 999
+
+.container
+  max-width: 140rem
+  margin: 0 auto
+  padding: 0 1.5rem
+
+.nav
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.nav-logo
+  font-size: 3rem
+  font-weight: 800
+  text-decoration: none
+  letter-spacing: .3em
+  color: #fff
+  &:hover
+    text-decoration: none
+    color: #FFF
+
+.nav-list
+  display: flex
+  list-style: none
+
+.nav-item
+  margin: 0 2.5rem
+
+.nav-link
+  text-decoration: none
+  font-size: 1.4rem
+  font-weight: 800
+  letter-spacing: 1px
+  color: #fff
+  transition: color .5s
+  position: relative
+
+.nav-link:before
+  content: ''
+  bottom: 0
+  left: 0
+  position: absolute
+  width: 100%
+  height: 2px
+  background-color: #7d1eff
+  transition: 0.2s
+  transform: scaleX(0)
+
+.nav-link:hover:before
+  transform: scaleX(1)
+
+.nav-link:hover
+  text-decoration: none
+  color: #FFF
+
+
+.hero
+  width: 100%
+  height: 100vh
+  background-color: #2b2b2b
+  overflow: hidden
+  position: relative
+  display: flex
+  align-items: center
+
+.circle
+  position: absolute
+
+.circle-small
+  top: -15rem
+  left: -21rem
+
+.circle-large
+  bottom: -80rem
+  right: -60rem
+
+.content
+  width: 100%
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 10
+
+.text
+  color: #fff
+  flex: 1
+  text-transform: uppercase
+
+  h1
+    font-size: calc(1rem + 4vw)
+    font-weight: 800
+    line-height: 1.2
+
+    span
+      color: #994fff
+
+  h5
+    font-size: 1.9rem
+    font-weight: 800
+    margin: 8rem 0 4rem 0
+
+  p
+    text-transform: lowercase
+    font-size: 1.6rem
+    line-height: 1.5
+    margin-bottom: 2rem
+
+.cta
+  display: inline-block
+  padding: 1.5rem 3rem
+
+  font-size: 1.4rem
+  font-weight: 800
+  color: #fff
+
+  text-decoration: none
+  background-color: #7d1eff
+  border-radius: 5px
+  border: none
+  outline: none
+
+  overflow: hidden
+  position: relative
+
+  &:hover
+    color: #fff
+    text-decoration: none
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 1.8em
+    height: 100%
+    background-color: rgba(#fff, 0.6)
+    transform: translateX(-4em) skewX(-45deg)
+  &:hover
+    &:before
+      animation: move-light .6s
+
+.watch-wrapper
+  flex: 0 0 45%
+
+.overlay
+  width: 100%
+  height: 100vh
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 9999
+  display: flex
+
+.layer
+  background-color: #B2aabf
+
+.layer-1, .layer-2, .layer-3
+  flex: 1
+
+// Modal
+
+
+// Button Hover Animation
+@keyframes move-light
+  from
+    transform: translateX(-4em) skewX(-45deg)
+  to
+    transform: translateX(14em) skewX(-45deg)
